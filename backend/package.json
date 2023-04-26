@@ -1,0 +1,28 @@
+{
+  "name": "node-plugin-template-backend",
+  "version": "1.0.0",
+  "description": "node.js 插件模版。",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "lint": "tsc --noEmit && eslint \"src/**/*.{js,ts}\" --quiet --fix"
+  },
+  "dependencies": {
+    "@ones-op/node-ability": "~0.6.0",
+    "@ones-op/node-common-db": "~0.7.0",
+    "@ones-op/node-database": "~0.6.0",
+    "@ones-op/node-fetch": "~0.6.0",
+    "@ones-op/node-file": "~0.6.0",
+    "@ones-op/node-logger": "~0.5.7",
+    "@ones-op/node-protocol-utils": "~0.6.0",
+    "@ones-op/node-system-db": "~0.5.7",
+    "@ones-op/node-types": "~0.3.7",
+    "@ones-op/node-utils": "~0.5.7",
+    "@ones-op/node-error": "~0.1.0",
+    "@ones-op/node-protocol": "~0.6.0",
+    "@ones-op/node-third-import": "~0.1.0"
+  },
+  "devDependencies": {
+    "@ones-op/node-host": "~0.2.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "branch_user_group_config",
+  "private": true,
+  "devDependencies": {
+    "@ones/cli-ability-template": "^1.8.0",
+    "@ones/cli-plugin": "^1.11.0",
+    "@ones/cli-plugin-template": "^1.4.0",
+    "cross-env": "7.0.3",
+    "prettier": "~2.7.1",
+    "rimraf": "3.0.2",
+    "typescript": "~4.6.4"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "op init",
+    "packup": "op packup",
+    "debug": "npx op invoke run --mode=backend"
+  },
+  "license": "ISC",
+  "workspaces": [
+    "web",
+    "backend"
+  ],
+  "dependencies": {
+    "@ones-design/user": "2.8",
+    "@ones-op/event": "0.10.0"
+  }
+}

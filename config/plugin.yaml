@@ -1,0 +1,102 @@
+# yaml-language-server: $schema=../node_modules/@ones/plugin-config-schema/dist/plugin-schema.json
+service:
+  app_id: _NRsH76C
+  name: 新增和同步项目管理成员中的部门和用户组
+  version: 1.0.0
+  description: 该插件用于添加项目成员时选择部门、用户组维度，当部门、用户组成员变动时同步更新到项目成员中。
+  mode: org
+  logo: null
+  language: nodejs
+  language_version: 16.13.0
+  host_version: 1.0.4
+  host_sub_version: 1.0.0
+  min_system_version: 3.10.52
+  auth: null
+  config: null
+  scope: 1
+apis:
+  - type: addition
+    methods:
+      - POST
+    url: /hello
+    function: hello
+  - type: addition
+    methods:
+      - POST
+    url: /get_project_role_map
+    function: get_project_role_map
+  - type: addition
+    methods:
+      - POST
+    url: /set_project_role_map
+    function: set_project_role_map
+  - type: addition
+    methods:
+      - POST
+    url: /sync
+    function: sync
+  - type: addition
+    methods:
+      - POST
+    url: /create_process
+    function: create_process
+  - type: addition
+    methods:
+      - POST
+    url: /delete_role
+    function: delete_role
+  - type: addition
+    methods:
+      - POST
+    url: /delete_member
+    function: delete_member
+  - type: addition
+    methods:
+      - POST
+    url: /set_cron
+    function: set_cron
+  - type: addition
+    methods:
+      - POST
+    url: /get_cron
+    function: get_cron
+
+  - type: replace
+    methods:
+      - POST
+    url: /team/:teamUUID/project/:projectUUID/role/:roleUUID/members/delete
+    function: delete_member
+  - type: replace
+    methods:
+      - POST
+    url: /team/:teamUUID/project/:projectUUID/role/:roleUUID/delete
+    function: delete_role
+modules:
+  - id: settings-u4sY
+    title: 部门或用户组同步频率配置
+    moduleType: settings
+    entry: modules/settings-u4sY/index.html
+  - id: ones-project-component-member-action-new-etvM
+    title: 管理部门或用户组
+    moduleType: ones:project:component:member:action:new
+    entry: modules/ones-project-component-member-action-new-etvM/index.html
+  - id: ones-global-progress-detail-9tGG
+    title: 同步部门或用户组
+    moduleType: ones:global:progress:detail
+    entry: modules/ones-global-progress-detail-9tGG/index.html
+abilities:
+  - id: mW8cuBWp
+    name: 固定间隔时间任务
+    version: 1.0.0
+    abilityType: TimerTask
+    function:
+      taskActionFunc: taskAction
+    config:
+      - key: interval
+        value: 30
+        fieldType: Number
+        show: false
+        required: true
+
+
+

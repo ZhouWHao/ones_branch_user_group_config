@@ -1,0 +1,17 @@
+.husky/
+dist/
+docs/
+node_modules/
+test/
+*.png
+*.svg
+.gitignore
+.npmrc
+.prettierignore
+.eslintignore
+browserslist
+LICENSE
+package*.json
+workspace/
+yarn.lock
+.lintstagedrc.json

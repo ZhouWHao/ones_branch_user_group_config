@@ -1,0 +1,34 @@
+{
+  "name": "node-plugin-template-web",
+  "version": "1.0.0",
+  "description": "node.js 插件模版。",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "lint": "tsc --noEmit && eslint \"src/**/*.{js,ts}\" --quiet --fix"
+  },
+  "dependencies": {
+    "@ones-op/fetch": "~0.5.3",
+    "@ones-op/store": "0.8.1",
+    "ahooks": "3.7.6"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.18.13",
+    "@babel/plugin-transform-runtime": "~7.18.10",
+    "@babel/preset-env": "~7.18.10",
+    "@babel/preset-react": "~7.17.12",
+    "@babel/preset-typescript": "~7.17.12",
+    "@babel/runtime-corejs3": "~7.18.9",
+    "@ones-design/core": "~2.18.0",
+    "@ones-design/icons": "~2.29.0",
+    "@svgr/webpack": "~6.2.1",
+    "@types/react": "~17.0.53",
+    "@types/react-dom": "~17.0.19",
+    "babel-loader": "~8.2.5",
+    "css-loader": "~6.7.1",
+    "postcss": "~8.4.14",
+    "postcss-loader": "~7.0.2",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2"
+  }
+}

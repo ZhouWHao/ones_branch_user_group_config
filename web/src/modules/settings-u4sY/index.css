@@ -1,0 +1,30 @@
+#ones-mf-root > .ones-alert {
+  padding-top: 15px;
+}
+#ones-mf-root .plugin-settings-container {
+  overflow: unset;
+}
+#ones-mf-root .unit_select {
+  width: 80px;
+  height: 30px;
+  top: 32px;
+}
+
+#ones-mf-root .ones-input-number {
+  width: 180px;
+  height: 30px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#ones-mf-root .ones-select-selector {
+  background-color: #f8f8f8;
+  color: #303030;
+  border-left: 0px;
+  top: -1px;
+  left: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.inline_item_content {
+  display: inline-block;
+}
